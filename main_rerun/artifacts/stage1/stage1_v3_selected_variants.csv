@@ -1,0 +1,2 @@
+model_name,prob_version,mean_pr_auc,std_pr_auc,mean_brier,mean_ece,mean_roc_auc,mean_recall_0p5,mean_precision_0p5,variant_key,selection_rule
+linear_svm,sigmoid,0.1194139102969349,0.0725780469575353,0.0562935146373745,0.0567718803553502,0.6327992727819587,0.0,0.0,linear_svm__sigmoid,calibrated_only__pr_auc_first__brier_ece_tiebreak
