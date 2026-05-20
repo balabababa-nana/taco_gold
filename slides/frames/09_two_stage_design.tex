@@ -1,0 +1,25 @@
+\begin{frame}{Why a Two-Stage Design?}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.47\textwidth}
+      \centering
+      {\bfseries\Large One-stage\par}
+      \vspace{0.4em}
+      Raw text sentiment aggregation\\[0.5em]
+      $\Downarrow$\\[0.5em]
+      Gold return prediction
+
+    \column{0.47\textwidth}
+      \centering
+      {\color{orange!90!black}\bfseries\Large Two-stage\par}
+      \vspace{0.4em}
+      Text + pressure features\\[0.4em]
+      $\Downarrow$\makebox[0pt][l]{\hspace{0.7em}\raisebox{0.25em}{\scriptsize Stage 1}}\\[0.45em]
+      Event-level \texttt{P\_taco}\\[0.4em]
+      $\Downarrow$\makebox[0pt][l]{\hspace{0.7em}\raisebox{0.25em}{\scriptsize Stage 2}}\\[0.45em]
+      Gold return prediction
+  \end{columns}
+
+  \vspace{0.6em}
+  \small
+  Stage 1 acts as a \textbf{supervised signal compression} step: it turns noisy text into a task-aligned intermediate probability signal.
+\end{frame}

@@ -1,0 +1,16 @@
+\begin{frame}{Validation Design and Leakage Control}
+  \begin{itemize}
+    \item \textbf{Nested CV}: model tuning and model comparison are separated.
+    \item \textbf{OOF probabilities}: Stage 2 only consumes Stage 1 out-of-fold or true holdout probabilities.
+    \item \textbf{Primary holdout}: \texttt{2025-08-01} to \texttt{2025-10-25} is reserved for final out-of-sample reporting.
+    \item \textbf{Purged CV + embargo}: used to reduce neighboring-sample contamination and boundary leakage.
+    \item \textbf{Lagged controls}: macro and market variables are lagged so only information available before the target day enters prediction.
+  \end{itemize}
+
+  \hspace{1.4em}
+  \begin{minipage}{0.86\textwidth}
+    \begin{alertblock}{Key rule}
+      Stage 2 never uses in-sample Stage 1 probabilities.
+    \end{alertblock}
+  \end{minipage}
+\end{frame}

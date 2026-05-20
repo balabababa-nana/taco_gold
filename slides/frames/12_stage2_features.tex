@@ -1,0 +1,33 @@
+\begin{frame}{What Goes into Stage 2?}
+  \footnotesize
+  \begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1.18}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.56\textwidth}}
+      \toprule
+      Feature family & Representative inputs \\
+      \midrule
+      Daily \texttt{P\_taco} aggregates & \texttt{p\_taco\_any}, \texttt{p\_taco\_top1}, \texttt{p\_taco\_tail\_010}, \texttt{p\_taco\_any\_decay\_2d} \\
+      Lagged macro / market controls & DXY return, real yield change, VIX, SPX stress \\
+      Cross-asset structure & Gold-SPX rolling correlation \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.6em}
+  \begin{block}{Target definition}
+    \[
+    \mathrm{Gold\_Return}_e=
+    \log\left(
+    \frac{\mathrm{GoldClose}_{\tau(e)}}{\mathrm{GoldClose}_{a(e)}}
+    \right)
+    \]
+
+    \vspace{0.2em}
+    \footnotesize
+    \begin{itemize}
+      \item $\tau(e)$: first valid trading day after the event
+      \item $a(e)$: nearest valid trading day before the event
+    \end{itemize}
+  \end{block}
+\end{frame}

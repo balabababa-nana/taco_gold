@@ -1,0 +1,18 @@
+\begin{frame}{How We Handle the Rare-Event Setting}
+  \begin{itemize}
+    \item \textbf{Reweighting:} increase the importance of rare positives during training.
+    \item \textbf{Selection metric:} compare models mainly with \textbf{PR-AUC}.
+    \item \textbf{Calibration:} make the final \texttt{P\_taco} usable as a probability signal.
+  \end{itemize}
+
+  \begin{block}{Model-level handling}
+    \begin{itemize}
+      \item Linear models: class reweighting to improve sensitivity to rare positives
+      \item Tree models: loss weighting based on the positive/negative class ratio
+      \item Final comparison: probability quality rather than only hard-label accuracy
+    \end{itemize}
+  \end{block}
+
+  \tiny
+  References: King and Zeng (2001); Saito and Rehmsmeier (2015).
+\end{frame}

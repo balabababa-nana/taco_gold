@@ -1,0 +1,21 @@
+\begin{frame}{What Goes into Stage 1?}
+  \scriptsize
+  \begin{table}
+    \centering
+    \begin{tabular}{p{0.24\textwidth} p{0.31\textwidth} p{0.33\textwidth}}
+      \toprule
+      Feature family & Examples & Role \\
+      \midrule
+      Text sentiment & FinBERT \texttt{pos / neu / neg} & Capture the semantic tone of the anchor text \\
+      Candidate intensity & Keyword score, candidate priority, follow-up density & Describe whether the anchor looks like a strong pressure event \\
+      Event metadata & Source, timing, term identifier & Preserve contextual event information \\
+      Pressure features & SPX stress, VIX-related pressure signals & Capture market conditions around the event \\
+      Attention proxy & Tariff / war / inflation attention & Optional public-attention signal \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.4em}
+  \small
+  FinBERT provides \textbf{positive / neutral / negative} probabilities for each anchor text. These are Stage 1 input features, not the final gold-forecast output.
+\end{frame}
