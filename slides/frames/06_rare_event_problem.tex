@@ -1,0 +1,31 @@
+\begin{frame}{Why Stage 1 Is a Rare-Event Problem}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+      \centering
+      {\bfseries\large Typical balanced\\classification\par}
+      \vspace{0.55em}
+      \begin{minipage}{0.92\linewidth}
+        \begin{itemize}
+          \item Positive and negative classes are closer in size
+          \item Accuracy and ROC-style metrics are often informative
+          \item The goal is usually overall classification correctness
+        \end{itemize}
+      \end{minipage}
+
+    \column{0.48\textwidth}
+      \centering
+      {\color{orange!90!black}\bfseries\large Our Stage 1 task\par}
+      \vspace{1.2em}
+      \begin{minipage}{0.92\linewidth}
+        \begin{itemize}
+          \item Positive events are very rare (\(<5\%\))
+          \item We care about ranking the few important positives near the top
+          \item \textbf{PR-AUC} is more useful than plain accuracy here
+        \end{itemize}
+      \end{minipage}
+  \end{columns}
+
+  \vspace{0.5em}
+  \small
+  Intuition: PR-AUC focuses on whether the model's high-risk predictions are truly positive and whether rare positive cases are captured early.
+\end{frame}

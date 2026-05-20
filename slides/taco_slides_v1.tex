@@ -1,0 +1,64 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{array}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\graphicspath{{assets/}}
+
+\title{TACO-Gold}
+\subtitle{From Trump Retreat Risk to Gold Forecasting}
+\date{}
+\author{Horace et al.}
+\institute{Project Presentation}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\input{frames/01_opening.tex}
+\input{frames/02_question.tex}
+\input{frames/03_definition.tex}
+
+\section{Data and Labeling}
+\input{frames/04_data_sources.tex}
+\input{frames/05_sample_labeling.tex}
+\input{frames/06_rare_event_problem.tex}
+\input{frames/07_rare_event_methods.tex}
+
+\section{Method}
+\input{frames/08_validation_leakage.tex}
+\input{frames/09_two_stage_design.tex}
+\input{frames/10_stage1_features.tex}
+\input{frames/11_stage1_results.tex}
+\input{frames/12_stage2_features.tex}
+\input{frames/13_stage2_selection.tex}
+\input{frames/14_stage2_interpretation.tex}
+
+\section{Results}
+\input{frames/15_benchmark_results.tex}
+\input{frames/16_two_stage_vs_single_stage.tex}
+\input{frames/17_negative_r2.tex}
+
+\section{Conclusion}
+\input{frames/18_conclusion.tex}
+
+\appendix
+\input{frames/19_appendix_validation.tex}
+\input{frames/20_appendix_labeling.tex}
+
+\end{document}

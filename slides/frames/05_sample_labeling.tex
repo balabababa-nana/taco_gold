@@ -1,0 +1,29 @@
+\begin{frame}{Sample Split and Labeling}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.54\textwidth}
+      \begin{block}{Training and Test Windows}
+        \begin{itemize}
+          \item First-term training window: \texttt{2017-01-20} to \texttt{2021-01-08}
+          \item Second-term training window: \texttt{2025-01-20} to \texttt{2025-07-31}
+          \item Test set / primary holdout: \texttt{2025-08-01} to \texttt{2025-10-25}
+        \end{itemize}
+      \end{block}
+
+      \small
+      Biden-period observations and the platform gap are excluded from the main training and test design.
+
+    \column{0.42\textwidth}
+      \begin{block}{Stage 1 Sample}
+        \begin{itemize}
+          \item Total events: \textbf{1,886}
+          \item Positive events: \textbf{61}
+          \item Positive rate: \textbf{3.23\%}
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{Labeling}
+        \small
+        Labels are assisted by \textbf{DeepSeek + prompt} to judge whether a retreat signal appears in the 48-hour follow-up texts.
+      \end{block}
+  \end{columns}
+\end{frame}

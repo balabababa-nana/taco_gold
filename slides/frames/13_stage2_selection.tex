@@ -1,0 +1,29 @@
+\begin{frame}{Stage 2 Final Model Selection}
+  \footnotesize
+  \begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1.15}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{0.10\textwidth}
+                    >{\raggedright\arraybackslash}p{0.22\textwidth}
+                    r r}
+      \toprule
+      Rank & Model & RMSE & MAE \\
+      \midrule
+      \textbf{1} & \textbf{RF} & \textbf{0.0098} & \textbf{0.0072} \\
+      2 & Ridge & 0.0099 & 0.0072 \\
+      3 & XGB & 0.0100 & 0.0074 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.4em}
+  \small
+  Final selection is based on \textbf{outer-CV RMSE and MAE}; the holdout is used only for final out-of-sample reporting.
+
+  \vspace{0.25em}
+  \small
+  Selected model: \texttt{svm\_sigmoid + RF + two\_stage\_v2\_core}
+
+  \tiny
+  Holdout RMSE comparison: RF = 0.0153, Ridge = 0.0156, XGB = 0.0153.
+\end{frame}

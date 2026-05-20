@@ -1,0 +1,31 @@
+\begin{frame}{Why Is the Out-of-Sample \texorpdfstring{$R^2$}{R2} Negative?}
+  \begin{block}{Out-of-sample \texorpdfstring{$R^2$}{R2} formula}
+    \[
+    R^2_{\mathrm{oos}}
+    =
+    1-
+    \frac{\sum_{t \in \mathrm{test}} (y_t-\hat{y}_t)^2}
+         {\sum_{t \in \mathrm{test}} (y_t-\bar{y}_{\mathrm{test}})^2}
+    \]
+  \end{block}
+
+  \begin{alertblock}{When is it negative?}
+    \[
+    R^2_{\mathrm{oos}} < 0
+    \quad \Longleftrightarrow \quad
+    \sum (y_t-\hat{y}_t)^2
+    >
+    \sum (y_t-\bar{y}_{\mathrm{test}})^2
+    \]
+    In words: the model's test-set squared error is larger than the squared error from simply predicting the holdout mean.
+  \end{alertblock}
+
+  \begin{itemize}
+    \item Gold daily returns are noisy, so negative holdout $R^2$ is not unusual in short forecasting windows.
+    \item A negative $R^2$ does \alert{not} mean the model is useless; it means it fails to beat the holdout-mean baseline under squared-error loss.
+    \item In this project, \textbf{RMSE}, \textbf{MAE}, and directional accuracy are more informative summary metrics than $R^2$ alone.
+  \end{itemize}
+
+  \tiny
+  Final two-stage holdout $R^2 = -0.0286$.
+\end{frame}

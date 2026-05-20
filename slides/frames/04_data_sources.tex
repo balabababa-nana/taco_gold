@@ -1,0 +1,22 @@
+\begin{frame}{Data Sources}
+  \small
+  \begin{table}
+    \centering
+    \renewcommand{\arraystretch}{1.35}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.35\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth}}
+      \toprule
+      Data block & What we collect & Primary source \\
+      \midrule
+      Trump first-term text & Tweets, timestamps, raw text & Kaggle dataset \\
+      Trump second-term text & Truth Social posts, timestamps, raw text & Public GitHub archive \\
+      Market stress & SPX drawdown, VIX change, related controls & FRED \\
+      Gold target series & Gold daily close and return series & Alpha Vantage \\
+      Attention proxy & Tariff / war / inflation search attention & Google Trends \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.4em}
+  \tiny
+  Note: The second-term Truth Social archive comes from the public GitHub project \texttt{stiles/trump-truth-social-archive}.
+\end{frame}
